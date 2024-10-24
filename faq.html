@@ -1,0 +1,190 @@
+<html>
+<head>
+<style>
+
+/* ------FAQ styling begins ----------*/
+.faqbox{
+background-color:#ABC8C7;
+opacity:0.8;
+border:2px solid #0D0221;
+font-family:"Times New Roman", Times, serif;
+padding:20px;
+color:#0D0221;
+}
+.answer{
+display:none;
+padding: 5px 0px;
+margin-bottom: 15px;
+}
+
+.faq-list-item{
+position:relative;
+margin:10px;
+border-bottom:1px solid #ccc;
+cursor:pointer;
+
+}
+
+.faq-list-item span{
+position: absolute;
+display:inline-block;
+top:15px;
+right:200px;
+font-size:20px;
+}
+/* ------FAQ styling ends----------*/
+</style>
+</head>
+<body>
+<header>
+<meta charset="UTF-8">
+<title>New Jersey</title>
+<style>
+header{
+background-color:blue;
+ width:100px
+ height:100px
+ text-align:center;
+}
+.beach2img{
+padding:200px;
+text-align:center;
+background-image:url("beach2.jpg");
+ height:400px;
+opacity:0.9;
+color:white;
+}
+nav{
+float:center;
+background:grey;
+}
+nav ul li{
+list-style-type:none;
+display: inline-block;
+}
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:20px;
+margin:135px;
+text-transform:uppercase;
+position:static;
+}
+nav ul li a:hover {
+color: #000;
+}
+
+nav a::before {
+content: '';
+display: block;
+height: 4px;
+background-color: #FFEBCD;
+position:   ;
+top: 0;
+left:0;
+width: 0%;
+transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+width: 100%;
+}
+footer {
+background-color : gray;
+width:100%;
+height: 80px;
+text-align:center;
+font-size:20px;
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1 style="text-align:center; color:Black;">New Jersey</h1>
+<nav>
+
+
+<ul>
+<li> <a href="New Jersey.html">Homepage</a></li>
+<li> <a href="Attractions.html">Attractions</a></li>
+<li> <a href="Hotels.html">Hotels</a></li>
+<li> <a href="Facts.html">Facts About Jersey</a></li>
+<li> <a href="Contact.html">Contact Us</a></li>
+<li> <a href="faq.html">FAQ</a></li>
+
+</ul>
+
+</nav>
+</header>
+
+</nav>
+</header>
+
+<h1>FAQ</h1>
+<div class="faqbox">
+<ul> <li class='faq-list-item'> <h2>What is the average temperature in New Jersey?</h2> <span>+</span>
+
+ <div class='answer'><p><h3> Depending on the season this is the average temperature Winter (December to February): Average temperatures range from about 25°F to 35°F, with January being the coldest month. Spring (March to May): Temperatures gradually rise from around 45°F in March to 70°F in May. Summer (June to August): This is the warmest season, with average temperatures typically between the high 80s°F and high 90s°F. Fall (September to November): Temperatures start to cool down, averaging around 68°F in September and dropping to 47°F by November.</h3><p></div> </li> 
+
+<li class='faq-list-item'><h2>What is the best season to visit New Jersey?</h2>  <span>+</span>
+
+ <div class='answer'><p><h3>The best times to visit New Jersey are during the spring (April to June) and fall (September to October). During these months, the weather is mild and pleasant, with temperatures ranging from 59°F to 77°F (15°C to 25°C). Spring brings blooming flowers and sunny days, while fall offers beautiful foliage and comfortable temperatures without the summer crowds. If you enjoy festivals and outdoor activities, these seasons are ideal for exploring everything New Jersey has to offer.</h3></p></div> </li> 
+
+<li class='faq-list-item'><h2> What is the closest airport in New Jersy</h2> <span>+</span>
+
+ <div class='answer'><p><h3>One of the airports in New Jesey is Newark Liberty International Airport (EWR).</h3></p></div></li> 
+
+ <li class='faq-list-item'><h2>How is life in New Jersey?</h2> <span>+</span>
+
+ <div class='answer'><p><h3> New Jersey is a state full of contrasts and diversity. Here are some highlights: Geography: It has a mix of urban and rural areas, with bustling cities like Newark and Jersey City, and scenic spots like the Pine Barrens and the Delaware Water Gap12. Economy: The state has a strong economy with key industries including pharmaceuticals, finance, and technology2. Culture: New Jersey is known for its rich cultural diversity, with vibrant communities and a variety of cultural festivals and events2. Education: It boasts some of the best public schools in the country and is home to prestigious universities like Princeton2. Recreation: From beautiful beaches along the Jersey Shore to hiking trails in the Appalachian Mountains, there’s plenty to do outdoors1. Overall, New Jersey offers a unique blend of urban excitement and natural beauty. Is there something specific you’re curious about or planning to do in New Jersey?</h3><p></div> </li> 
+
+<li class='faq-list-item'> <h2>What are some cities near to New Jersey?</h2> <span>+</span>
+
+ <div class='answer'><p><h3> Here are some cities close to New Jersey that you might find interesting:
+
+New York City, NY: Just across the Hudson River, NYC offers endless attractions, from Times Square to Central Park1.
+Philadelphia, PA: About an hour’s drive from southern New Jersey, known for its rich history and cultural sites1.
+Stamford, CT: Located to the northeast, it’s a smaller city with a charming downtown and easy access to NYC1.
+Allentown, PA: A bit further west, known for its parks and the Dorney Park & Wildwater Kingdom1.
+Newark, NJ: Within New Jersey, Newark is a major city with a vibrant arts scene and the Prudential Center2.
+Are you planning a visit or considering a move? Let me know if you need more details about any of these places!
+<h3><p></div> </li> 
+
+</ul>
+  
+</div>
+
+</div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$(function(){
+
+  $('.faq-list-item').click(function(){
+    var $answer = $(this).find('.answer');
+
+    if($answer.hasClass('open')) { 
+      $answer.removeClass('open');
+      // Use the slideUp() method to hide $answer
+      $answer.slideUp();
+      
+      // Find the <span> elements inside, then rewrite the content using the text() method
+      $(this).find('span').text('+');
+      
+    } else {
+      $answer.addClass('open'); 
+      // Use the slideDown() method to show $answer
+      $answer.slideDown();
+      $(this).find('span').text('-');
+      // Find the <span> elements inside, then rewrite the content using the text() method
+      
+      
+    }
+  });
+});
+
+
+</script>
+</body>
+</html>
